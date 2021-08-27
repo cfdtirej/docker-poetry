@@ -18,6 +18,7 @@ RUN apt-get install -y curl \
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python - && \
     echo 'export PATH="$HOME/.poetry/bin:$PATH"' >> ~/.bashrc 
 RUN /bin/bash -c 'source ~/.bashrc'
+RUN poetry config virtualenvs.in-project true
 
 RUN pip install --upgrade pip && \
     pip install --upgrade setuptools
