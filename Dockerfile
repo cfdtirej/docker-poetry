@@ -25,7 +25,7 @@ RUN pip install --upgrade pip && \
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-RUN mkdir -p /root/src/backend
-WORKDIR /root/src/backend
+RUN mkdir -p /root/src
+WORKDIR /root/src
 
 EXPOSE 8000
